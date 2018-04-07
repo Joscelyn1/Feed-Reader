@@ -56,7 +56,6 @@ $(function() {
             loadFeed(0);
         })
         it('have at least one entry', function() {
-            const feed = document.querySelector('.feed');
             expect(entries.length).not.toBe(0);
                 done();
         });
