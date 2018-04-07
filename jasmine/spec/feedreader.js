@@ -51,13 +51,13 @@ $(function() {
     describe('initial entries', function() {
         const body = document.querySelector('body');
         const feedList = document.querySelector('.feed-list');
+        const entries = document.querySelector('.entry');
         beforeEach(function(done) {
-            loadFeed();
-                done();
+            loadFeed(0);
         })
         it('have at least one entry', function() {
             const feed = document.querySelector('.feed');
-            expect(feed.classList.contains('entry')).toBe(true);
+            expect(entries.length).not.toBe(0);
                 done();
         });
     });
