@@ -54,13 +54,12 @@ $(function() {
 
     describe('initial entries', function() {
 
-        const listOfEntries = document.querySelectorAll('.feed .entry');
-
         beforeEach(function(done) {
             loadFeed(0, done);
           });
 
-        it('have at least one entry', function() {
+        it('have at least one entry', function(done) {
+        const listOfEntries = document.querySelectorAll('.feed .entry');
             expect(listOfEntries.length).toBeGreaterThan(0);
             done();
         });
