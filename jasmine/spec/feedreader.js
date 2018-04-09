@@ -59,21 +59,22 @@ $(function() {
           });
 
         it('have at least one entry', function(done) {
-        const listOfEntries = document.querySelectorAll('.feed .entry');
+            const listOfEntries = document.querySelectorAll('.feed .entry');
             expect(listOfEntries.length).toBeGreaterThan(0);
             done();
         });
     });
-
+const entryItems1 = document.querySelector('.entry').innerHTML;
     describe('new feed selection', function() {
-
         beforeEach(function(done) {
             loadFeed(0, done);
         })
-        it('changes the content', function() {
-
-        })
-    })
+        it('updates the feed', function(done) {
+            const entryItems2 = document.querySelector('.entry').innerHTML;
+            expect(entryItems1 === entryItems2).toBe(false);
+            done();
+        });
+    });
 
 
     /* TODO: Write a new test suite named "New Feed Selection" */
