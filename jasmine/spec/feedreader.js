@@ -49,15 +49,12 @@ $(function() {
     });
 
     describe('initial entries', function() {
-        const body = document.querySelector('body');
-        const feedList = document.querySelector('.feed-list');
-        const entries = document.querySelector('.entry');
+        const listOfEntries = document.querySelectorAll('.feed');
         beforeEach(function(done) {
-            loadFeed(0);
-        })
+            loadFeed(0, done);
+          });
         it('have at least one entry', function() {
-            expect(entries.length).not.toBe(0);
-                done();
+            expect(listOfEntries.length).toBeGreaterThan(0);
         });
     });
 
