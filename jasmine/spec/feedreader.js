@@ -13,6 +13,8 @@ $(function() {
     * a related set of tests. This suite is all about the RSS
     * feeds definitions, the allFeeds variable in our application.
     */
+
+
     describe('RSS Feeds', function() {
 
         it('are defined', function() {
@@ -64,16 +66,20 @@ $(function() {
             done();
         });
     });
-const entryItems1 = document.querySelector('.entry').innerHTML;
+    const entryItems1 = document.querySelector('.entry').innerHTML;
     describe('new feed selection', function() {
+
         beforeEach(function(done) {
             loadFeed(0, done);
-        })
+        });
+
         it('updates the feed', function(done) {
             const entryItems2 = document.querySelector('.entry').innerHTML;
             expect(entryItems1 === entryItems2).toBe(false);
             done();
         });
     });
+
+
 
 }());
