@@ -69,20 +69,20 @@ $(function() {
 
     describe('new feed selection', function() {
 
-        beforeEach(function(done) {
+        beforeEach(function() {
             loadFeed(0, function(done) {
                 const entryItems1 = document.querySelector('.entry').innerHTML;
-            });
-
-            loadFeed(1, function() {
-                const entryItems2 = document.querySelector('.entry').innerHTML;
                 done();
             });
+
         });
 
         it('updates the feed', function(done) {
-
+            loadFeed(1, function(done) {
+                const entryItems2 = document.querySelector('.entry').innerHTML;
+            });
             expect(entryItems1 === entryItems2).toBe(false);
+            done();
         });
     });
 
