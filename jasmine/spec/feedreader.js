@@ -66,17 +66,24 @@ $(function() {
             done();
         });
     });
-    const entryItems1 = document.querySelector('.entry').innerHTML;
+
     describe('new feed selection', function() {
 
         beforeEach(function(done) {
-            loadFeed(0, done);
+            loadFeed(0, function() {
+                const entryItems1 = document.querySelector('.entry').innerHTML;
+                done();
+            });
+
+            loadFeed(1, function(done) {
+                const entryItems2 = document.querySelector('.entry').innerHTML;
+                done();
+            });
         });
 
         it('updates the feed', function(done) {
-            const entryItems2 = document.querySelector('.entry').innerHTML;
+
             expect(entryItems1 === entryItems2).toBe(false);
-            done();
         });
     });
 
