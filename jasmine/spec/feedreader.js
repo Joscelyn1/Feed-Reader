@@ -72,15 +72,15 @@ $(function() {
         beforeEach(function() {
             loadFeed(0, function(done) {
                 const entryItems1 = document.querySelector('.entry').innerHTML;
-                done();
-            });
 
+                loadFeed(1, function(done) {
+                    done();
+                })
+            });
         });
 
         it('updates the feed', function(done) {
-            loadFeed(1, function(done) {
-                const entryItems2 = document.querySelector('.entry').innerHTML;
-            });
+            const entryItems2 = document.querySelector('.entry').innerHTML;
             expect(entryItems1 === entryItems2).toBe(false);
             done();
         });
