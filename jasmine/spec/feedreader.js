@@ -71,7 +71,7 @@ $(function() {
 
         beforeEach(function() {
             loadFeed(0, function(done) {
-                const entryItems1 = document.querySelector('.entry').innerHTML;
+                entryItems1 = document.querySelector('.entry').innerHTML;
 
                 loadFeed(1, function(done) {
                     done();
@@ -80,7 +80,7 @@ $(function() {
         });
 
         it('updates the feed', function(done) {
-            const entryItems2 = document.querySelector('.entry').innerHTML;
+            entryItems2 = document.querySelector('.entry').innerHTML;
             expect(entryItems1 === entryItems2).toBe(false);
             done();
         });
