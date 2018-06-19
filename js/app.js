@@ -8,8 +8,6 @@
 
 // The names and URLs to all of the feeds we'd like available.
 
-var entryItems1;
-var entryItems2;
 var allFeeds = [
     {
         name: 'Udacity Blog',

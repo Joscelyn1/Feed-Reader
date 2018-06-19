@@ -49,7 +49,7 @@ $(function() {
             var menuIcon = document.querySelector('.menu-icon-link');
             menuIcon.click(); // clicks the menu icon
             expect(body.classList.contains('menu-hidden')).toBe(false); // expects the menu to be visible
-            menuIcon.click(); // clicks hte menu icon
+            menuIcon.click(); // clicks the menu icon
             expect(body.classList.contains('menu-hidden')).toBe(true); // expects the menu to be hidden
         });
     });
@@ -69,6 +69,8 @@ $(function() {
 
     describe('new feed selection', function() {
 
+        var entryItems1;
+        var entryItems2;
         beforeEach(function() {
             loadFeed(0, function(done) {
                 entryItems1 = document.querySelector('.entry').innerHTML; //after the feed is loaded at index 0, saves the html
