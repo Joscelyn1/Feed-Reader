@@ -10,7 +10,7 @@ This is an RSS Feed Reader program. I used Jasmine to write tests to ensure its 
 
 ## Licensing
 
-This game is a student project for [Udacity](www.udacity.com).
+This application is a student project for [Udacity](www.udacity.com).
 
 It is for private use only.
 
